@@ -39,12 +39,12 @@ def main():
         s = "Loss: {:.4f}".format(training_loss)
         tbar.set_description(s)
 
-        if epoch % 10 == 0:
-            if FLAGS.latent_dim == 2:
-                z = np.random.normal(size=[FLAGS.batch_size, FLAGS.latent_dim])
-                samples = vae.z2x(z)[0]
-                show_samples(samples, 10, 10, name=str(1000+epoch))
-                show_latent_scatter(vae, mnist, name=str(1000+epoch))
+        # if epoch % 10 == 0:
+        #     if FLAGS.latent_dim == 2:
+    z = np.random.normal(size=[FLAGS.batch_size, FLAGS.latent_dim])
+    samples = vae.z2x(z)[0]
+    show_samples(samples, 10, 10, name='samples')
+    show_latent_scatter(vae, mnist, name='latent')
 
     vae.save_generator('weights/vae_mnist/generator')
 

@@ -19,7 +19,7 @@ def show_samples(images, row, col, name="Unknown", save=True):
     plt.axis('off')
     plt.tight_layout()
     if save:
-        fig.savefig('figs/train/grid/'+name+'.pdf', bbox_inches="tight", pad_inches=0, format='pdf')
+        fig.savefig('figs/train/grid/'+name+'.png', bbox_inches="tight", pad_inches=0, format='png')
     else:
         plt.show()
 
@@ -55,4 +55,4 @@ def show_latent_scatter(vae, data, name="latent"):
     ax.set_yticks([])
     plt.tight_layout()
 
-    plt.savefig('figs/train/scatter/' + name + '.pdf', format='pdf')
+    plt.savefig('figs/train/scatter/' + name + '.png', format='png')
