@@ -5,14 +5,14 @@ import seaborn as sns
 sns.axes_style("white")
 
 
-def show_samples(images, row, col, name="Unknown", save=True):
+def show_samples(images, row, col, image_shape, name="Unknown", save=True):
     num_images = row*col
     fig = plt.figure(figsize=(col, row))
     grid = ImageGrid(fig, 111,
                      nrows_ncols=(row, col),
                      axes_pad=0.)
     for i in xrange(num_images):
-        im = images[i].reshape(28, 28)
+        im = images[i].reshape(image_shape)
         axis = grid[i]
         axis.axis('off')
         axis.imshow(im)
