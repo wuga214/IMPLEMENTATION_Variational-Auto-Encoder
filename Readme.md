@@ -10,11 +10,11 @@ $python vae_train.py
 ## Example on MNIST Dataset
 
 ### Samples
-![](https://github.com/wuga214/Variational-Auto-Encoder/blob/master/figs/train/grid/samples.png | width=100)
+![](https://github.com/wuga214/Variational-Auto-Encoder/blob/master/figs/train/grid/samples.png =250x250)
 
 
 ### Latent Space Distribution
-![](https://github.com/wuga214/Variational-Auto-Encoder/blob/master/figs/train/scatter/latent.png | width=100)
+![](https://github.com/wuga214/Variational-Auto-Encoder/blob/master/figs/train/scatter/latent.png =250x250)
 
 
 ## Update
