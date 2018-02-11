@@ -10,14 +10,15 @@ $python vae_train.py
 ## Example on MNIST Dataset
 
 ### Samples
-![](https://github.com/wuga214/Variational-Auto-Encoder/blob/master/figs/train/grid/samples.png)
+![](https://github.com/wuga214/Variational-Auto-Encoder/blob/master/figs/train/grid/samples.png | width=100)
 
 
 ### Latent Space Distribution
-![](https://github.com/wuga214/Variational-Auto-Encoder/blob/master/figs/train/scatter/latent.png)
+![](https://github.com/wuga214/Variational-Auto-Encoder/blob/master/figs/train/scatter/latent.png | width=100)
 
 
-## Issue
-There is an implementation of Gaussian observation VAE..
-But the training is extremely unstable due to tiny variance learned.
-Maybe it is not practical at all.
+## Update
+1. Removed standard derivation learning on Gaussian observation decoder.
+2. Set the standard derivation of observation to hyper-parameter.
+3. Add deconvolution CNN support for the Anime dataset.
+4. Remove Anime dataset itself to avoid legal issues.
