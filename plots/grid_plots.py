@@ -5,8 +5,10 @@ import seaborn as sns
 sns.axes_style("white")
 
 
-def show_samples(images, row, col, image_shape, name="Unknown", save=True):
+def show_samples(images, row, col, image_shape, name="Unknown", save=True, shift=False):
     num_images = row*col
+    if shift:
+        images = (images+1.)/2.
     fig = plt.figure(figsize=(col, row))
     grid = ImageGrid(fig, 111,
                      nrows_ncols=(row, col),

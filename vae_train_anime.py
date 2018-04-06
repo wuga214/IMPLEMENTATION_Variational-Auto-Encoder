@@ -6,15 +6,6 @@ from providers.anime import Anime
 from tqdm import tqdm
 from models.vae import VAE
 
-"""
-This simple implementation is heavily refer on some github code online.
-Such as:
-https://github.com/kvfrans/variational-autoencoder
-https://github.com/hwalsuklee/tensorflow-mnist-VAE
-etc
-
-The entire purpose of releasing this code is to help people understand the simple structure of VAE.
-"""
 
 def main():
     flags = tf.flags
@@ -23,7 +14,6 @@ def main():
     flags.DEFINE_integer("batch_size", 64, "Batch size.")
     flags.DEFINE_integer("epochs", 500, "As it said")
     flags.DEFINE_integer("updates_per_epoch", 100, "Really just can set to 1 if you don't like mini-batch.")
-    flags.DEFINE_string("data_dir", 'mnist', "Tensorflow demo data download position.")
     FLAGS = flags.FLAGS
 
     kwargs = {
