@@ -10,8 +10,8 @@ class VAE(object):
                  observation_dim=784,
                  learning_rate=1e-4,
                  optimizer=tf.train.RMSPropOptimizer,
-                 observation_distribution="Bernoulli",
-                 observation_std=0.1):
+                 observation_distribution="Bernoulli", # or Gaussian
+                 observation_std=0.01):
 
         self._latent_dim = latent_dim
         self._batch_size = batch_size
