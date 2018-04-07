@@ -10,7 +10,7 @@ def main():
     flags = tf.flags
     flags.DEFINE_integer("latent_dim", 64, "Dimension of latent space.")
     flags.DEFINE_integer("obs_dim", 12288, "Dimension of observation space.")
-    flags.DEFINE_integer("batch_size", 100, "Batch size.")
+    flags.DEFINE_integer("batch_size", 60, "Batch size.")
     flags.DEFINE_integer("epochs", 500, "As it said")
     flags.DEFINE_integer("updates_per_epoch", 100, "Really just can set to 1 if you don't like mini-batch.")
     FLAGS = flags.FLAGS
@@ -27,7 +27,7 @@ def main():
     z = np.random.normal(size=[FLAGS.batch_size, FLAGS.latent_dim])
     samples = g.e2x(z)
     print samples.shape
-    show_samples(samples, 10, 10, [64, 64, 3], name='samples', shift=True)
+    show_samples(samples, 4, 15, [64, 64, 3], name='small_samples', shift=True)
 
 if __name__ == '__main__':
     main()
